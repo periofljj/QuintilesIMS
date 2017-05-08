@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from "../../../public/logo.png";
 import './doctorInfo.css';
 
 class DoctorInfo extends Component {
@@ -11,14 +10,6 @@ class DoctorInfo extends Component {
     render() {
         return (
             <div className="doctor-info">
-                <div className="page-title">
-                    <img className="logo" src={logo} alt="logo"/>
-                    <span className="key">医院编号</span>
-                    <input className="value" type="text"/>
-
-                    <span className="key">医生编号</span>
-                    <input className="value" type="text"/>
-                </div>
                 <div className="doctor-info-table">
                     <div className="table-title">
                         <span className="title">Oncology Dynamics 医生首页信息表</span>

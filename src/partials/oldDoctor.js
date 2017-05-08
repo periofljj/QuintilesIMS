@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import DoctorInfo from '../components/doctorInfo/doctorInfo'
+import DoctorInfo from '../components/doctorInfo/doctorInfo';
+import PageTitle from '../components/pageTitle/pageTitle';
 
 class OldDoctorSurvey extends Component {
     constructor(props) {
@@ -10,6 +11,7 @@ class OldDoctorSurvey extends Component {
     render() {
         return (
             <div>
+                <PageTitle></PageTitle>
                 <DoctorInfo></DoctorInfo>
             </div>
         );

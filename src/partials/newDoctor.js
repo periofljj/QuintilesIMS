@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import DoctorInfo from '../components/doctorInfo/doctorInfo';
+import PageTitle from '../components/pageTitle/pageTitle';
 
 
 class NewDoctorSurvey extends Component {
@@ -10,7 +12,8 @@ class NewDoctorSurvey extends Component {
     render() {
         return (
             <div>
-                newDoc
+                <PageTitle></PageTitle>
+                <DoctorInfo></DoctorInfo>
             </div>
         );
     }
