@@ -17,13 +17,13 @@ class App extends Component {
 
 	componentWillMount() {
 		// this.setState({
-		// 	isChooseType: 
+		// 	isChooseType:
 		// // });
 	}
 
 	componentDidMount() {
 		// this.setState({
-		// 	isChooseType: 
+		// 	isChooseType:
 		// // });
 	}
 
@@ -50,10 +50,10 @@ class App extends Component {
 					isChooseType ? (
 								<div className="content">
 									<SurveyContent surveyType={this.state.surveyType}></SurveyContent>
-								</div>						
+								</div>
 							) : (
 							<div className="choose-type">
-								<Button class="choose-old-doc" clickSubmit={this.chooseOldDoc} buttonName="选择旧医生"></Button>
+								<Button class="choose-old-doc" clickSubmit={this.chooseOldDoc} buttonName="选择老医生"></Button>
 								<Button class="choose-new-doc" clickSubmit={this.chooseNewDoc} buttonName="选择新医生"></Button>
 							</div>
 						)

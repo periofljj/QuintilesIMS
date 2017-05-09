@@ -11,20 +11,21 @@
 				list-style: none;
 			}
 			padding:10px 5px;
-			lable{
+			label{
 				display: inline-block;
+				font-weight: normal;
 			}
-			.normal-lable{
+			.normal-label{
 				width: 135px;
 				margin-left: 20px;
 			}
-			.text-lable{
+			.text-label{
 				input{
 					width: 300px;
 					margin-left: 20px;
 				}
 			}
-			.input-lable{
+			.input-label{
 				margin-left: 20px;
 			}
 		}
