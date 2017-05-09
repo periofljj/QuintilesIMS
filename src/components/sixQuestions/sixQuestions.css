@@ -3,42 +3,33 @@
   padding: 10px;
   margin-right: auto;
   margin-left: auto; }
-
-.six-questions .clear {
-  clear: both; }
-
-.six-questions .question-ten {
-  width: 100%; }
-
-.six-questions .question-ten .questionTitle {
-  margin-left: 45px;
-  float: left;
-  text-align: left;
-  margin-bottom: 20px; }
-
-.six-questions .question-ten .talbe-list {
-  width: 100%; }
-
-.six-questions .section-left {
-  width: 50%;
-  margin-right: 5%;
-  float: left; }
-
-.six-questions .section-left .question-five {
-  border: 1px solid #000;
-  width: 100%;
-  margin-top: 40px;
-  padding: 20px; }
-
-.six-questions .section-right {
-  width: 45%;
-  float: left; }
-
-.six-questions .section-right .question-box {
-  padding: 20px;
-  border: 1px solid #000;
-  width: 100%;
-  margin-top: 40px; }
-
-.six-questions .section-right .question-box .drug-name input {
-  width: 300px; }
+  .six-questions .clear {
+    clear: both; }
+  .six-questions .question-ten {
+    width: 100%; }
+    .six-questions .question-ten .questionTitle {
+      margin-left: 45px;
+      float: left;
+      text-align: left;
+      margin-bottom: 20px; }
+    .six-questions .question-ten .talbe-list {
+      width: 100%; }
+  .six-questions .section-left {
+    width: 50%;
+    margin-right: 5%;
+    float: left; }
+    .six-questions .section-left .question-five {
+      border: 1px solid #000;
+      width: 100%;
+      margin-top: 40px;
+      padding: 20px; }
+  .six-questions .section-right {
+    width: 45%;
+    float: left; }
+    .six-questions .section-right .question-box {
+      padding: 20px;
+      border: 1px solid #000;
+      width: 100%;
+      margin-top: 40px; }
+      .six-questions .section-right .question-box .drug-name input {
+        width: 300px; }

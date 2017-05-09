@@ -4,27 +4,20 @@
   margin-right: auto;
   margin-left: auto;
   padding-left: 30px; }
-
-.reporter-info .reporter-content {
-  padding-left: 20px; }
-
-.reporter-info .reporter-content .reporter-line {
-  padding: 10px 5px; }
-
-.reporter-info .reporter-content .reporter-line li {
-  list-style: none; }
-
-.reporter-info .reporter-content .reporter-line label {
-  display: inline-block;
-  font-weight: normal; }
-
-.reporter-info .reporter-content .reporter-line .normal-label {
-  width: 135px;
-  margin-left: 20px; }
-
-.reporter-info .reporter-content .reporter-line .text-label input {
-  width: 300px;
-  margin-left: 20px; }
-
-.reporter-info .reporter-content .reporter-line .input-label {
-  margin-left: 20px; }
+  .reporter-info .reporter-content {
+    padding-left: 20px; }
+    .reporter-info .reporter-content .reporter-line {
+      padding: 10px 5px; }
+      .reporter-info .reporter-content .reporter-line li {
+        list-style: none; }
+      .reporter-info .reporter-content .reporter-line label {
+        display: inline-block;
+        font-weight: normal; }
+      .reporter-info .reporter-content .reporter-line .normal-label {
+        width: 135px;
+        margin-left: 20px; }
+      .reporter-info .reporter-content .reporter-line .text-label input {
+        width: 300px;
+        margin-left: 20px; }
+      .reporter-info .reporter-content .reporter-line .input-label {
+        margin-left: 20px; }
