@@ -8,27 +8,15 @@
 	}
 	.question-ten {
 		width:100%;
-		.questionTitle-left{
-			padding-left: 35px;
-			width: 75%;
+		.questionTitle{
+			margin-left: 45px;
 			float: left;
 			text-align: left;
+			margin-bottom: 20px;
 
-		}
-		.questionTitle-right{
-			float: left;
-			width: 15%;
-			padding-top:7px;
-			font-size: 20px;
 		}
 		.talbe-list{
 			width: 100%;
-			// table {
-			// 	border: 1px solid #000;
-			// }
-			// table>thead>tr>th{
-			// 	border: 1px solid #fff;
-			// }
 		}
 	}
 	.section-left{
@@ -50,6 +38,11 @@
 			border:1px solid #000;
 			width: 100%;
 			margin-top: 40px;
+			.drug-name{
+				input{
+					width: 300px;
+				}
+			}
 		}
 	}
 }

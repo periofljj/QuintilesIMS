@@ -10,17 +10,11 @@
 .six-questions .question-ten {
   width: 100%; }
 
-.six-questions .question-ten .questionTitle-left {
-  padding-left: 35px;
-  width: 75%;
+.six-questions .question-ten .questionTitle {
+  margin-left: 45px;
   float: left;
-  text-align: left; }
-
-.six-questions .question-ten .questionTitle-right {
-  float: left;
-  width: 15%;
-  padding-top: 7px;
-  font-size: 20px; }
+  text-align: left;
+  margin-bottom: 20px; }
 
 .six-questions .question-ten .talbe-list {
   width: 100%; }
@@ -45,3 +39,6 @@
   border: 1px solid #000;
   width: 100%;
   margin-top: 40px; }
+
+.six-questions .section-right .question-box .drug-name input {
+  width: 300px; }

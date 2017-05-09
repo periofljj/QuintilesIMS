@@ -10,11 +10,10 @@ class SixQuestions extends Component {
         return (
             <div className="six-questions">
                 <div className="question-ten">
-                    <div className="questionTitle-left">
+                    <div className="questionTitle">
                         <div>Q10. 过去4周您亲自诊治的(包括看的及治疗的)诊及住院病人数。</div>
                         <div>适用的每一行都需要填写，不适用的请勾选没有此类病人。</div>
                     </div>
-                    <div className="questionTitle-right">OD 2017Q1</div>
                     <div className="clear"></div>
                     <div className="table-list">
                         <table className="table table-bordered">
@@ -259,8 +258,8 @@ class SixQuestions extends Component {
                         <div className="question-box">
                             <div className="question-title">Q7. 过去2周内您接触或阅读过的与您治疗相关的药物信息中，您能回忆起的药物有哪个/哪些?</div>
                             <div className="question-content">
-                                <div>药物1<input type="text"/></div>
-                                <div>药物2<input type="text"/></div>
+                                <div className="drug-name">药物1 <input type="text"/></div>
+                                <div className="drug-name">药物2 <input type="text"/></div>
                                 <div><input type="radio"/> 1.不知道</div>
                                 <div><input type="radio"/> 2.无</div>
                             </div>
@@ -268,7 +267,7 @@ class SixQuestions extends Component {
                         <div className="question-box">
                             <div className="question-title">Q8. 您从哪些渠道接收或阅读到这些药物/治疗信息?</div>
                             <div className="question-content">
-                                <table>
+                                <table className="table">
                                     <thead>
                                         <tr>
                                             <th></th>
@@ -304,7 +303,7 @@ class SixQuestions extends Component {
                         <div className="question-box">
                             <div className="question-title">Q9. 这些信息在多大程度上改变或影响了您的处方行为? 1 影响最小，7 影响最大</div>
                             <div className="question-content">
-                                <table>
+                                <table className="table">
                                     <thead>
                                         <tr>
                                             <th></th>
