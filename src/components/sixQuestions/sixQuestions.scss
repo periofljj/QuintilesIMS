@@ -1,0 +1,55 @@
+.six-questions{
+	width:80%;
+	padding: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	.clear{
+		clear:both;
+	}
+	.question-ten {
+		width:100%;
+		.questionTitle-left{
+			padding-left: 35px;
+			width: 75%;
+			float: left;
+			text-align: left;
+
+		}
+		.questionTitle-right{
+			float: left;
+			width: 15%;
+			padding-top:7px;
+			font-size: 20px;
+		}
+		.talbe-list{
+			width: 100%;
+			// table {
+			// 	border: 1px solid #000;
+			// }
+			// table>thead>tr>th{
+			// 	border: 1px solid #fff;
+			// }
+		}
+	}
+	.section-left{
+		width:50%;
+		margin-right: 5%;
+		float:left;
+		.question-five{
+			border:1px solid #000;
+			width: 100%;
+			margin-top: 40px;
+			padding:20px;
+		}
+	}
+	.section-right{
+		width:45%;
+		float:left;
+		.question-box{
+			padding:20px;
+			border:1px solid #000;
+			width: 100%;
+			margin-top: 40px;
+		}
+	}
+}
