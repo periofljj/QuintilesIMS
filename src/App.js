@@ -58,9 +58,8 @@ class App extends Component {
         var array = [this.state];
         var csv = Papa.unparse(array);
         console.log("save", csv);
-        var localStorage = window.localStorage;
         var exportFilename = "survey-result.csv";
-        var csvData = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
+        var csvData = new Blob(["\ufeff" + csv], {type: 'text/csv;charset=utf-8;'});
         //IE11 & Edge
         if (navigator.msSaveBlob) {
             navigator.msSaveBlob(csvData, exportFilename);
@@ -75,7 +74,6 @@ class App extends Component {
         }
     }
 	chooseOldDoc() {
-		console.log("ssssss");
 		this.setState({
 			isChooseType: true,
 			surveyType: "OLD"
