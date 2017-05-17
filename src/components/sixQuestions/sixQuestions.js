@@ -4,6 +4,10 @@ import './sixQuestions.css';
 class SixQuestions extends Component {
     constructor(props) {
         super(props);
+        this.handleInputChange = this.handleInputChange.bind(this);
+    }
+    handleInputChange(event) {
+        this.props.sixQuestionsChange(event);
     }
 
     render() {

@@ -10,7 +10,11 @@ import './oldDoctor.css';
 class OldDoctorSurvey extends Component {
     constructor(props) {
         super(props);
+        this.handleInputChange = this.handleInputChange.bind(this);
         // this.save = this.save.bind(this);
+    }
+    handleInputChange(event) {
+        this.props.oldDoctorSurveyChange(event);
     }
 
     render() {
@@ -150,8 +154,7 @@ class OldDoctorSurvey extends Component {
                          </div>
                     </div>
                 </div>
-                <SixQuestions></SixQuestions>
-                <Button class="finish-survey" saveSubmit={this.finish} buttonName="完成问卷"></Button>
+                <SixQuestions sixQuestionsChange={this.handleInputChange}></SixQuestions>
             </div>
         );
     }

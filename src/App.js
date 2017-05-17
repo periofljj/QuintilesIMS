@@ -10,6 +10,7 @@ class App extends Component {
 		super(props);
 		this.handleInputChange = this.handleInputChange.bind(this);
         this.finish = this.finish.bind(this);
+        //this.save = this.save.bind(this);
 		this.chooseOldDoc = this.chooseOldDoc.bind(this);
 		this.chooseNewDoc = this.chooseNewDoc.bind(this);
 		this.state = {
@@ -21,13 +22,13 @@ class App extends Component {
 	componentWillMount() {
 		// this.setState({
 		// 	isChooseType:
-		// // });
+		// });
 	}
 
 	componentDidMount() {
 		// this.setState({
 		// 	isChooseType:
-		// // });
+		// });
 	}
 	handleInputChange(event) {
         const target = event.target;
@@ -48,10 +49,12 @@ class App extends Component {
             states = {};
         }
         states[name] = value;
+        console.log(states);
         console.log("save");
     }
 
     finish() {
+    	console.log("888");
         var array = [this.state];
         var csv = Papa.unparse(array);
         console.log("save", csv);
@@ -70,8 +73,6 @@ class App extends Component {
             link.click();
             document.body.removeChild(link);
         }
-
-        localStorage.removeItem("medical-survey");
     }
 	chooseOldDoc() {
 		console.log("ssssss");
@@ -94,29 +95,28 @@ class App extends Component {
 			<div className="App">
 				{
 					isChooseType ? (
-								<div className="content">
-									<SurveyContent surveyType={this.state.surveyType}></SurveyContent>
-								</div>
-							) : (
-							<div className="choose-type">
-								<Button class="choose-old-doc" clickSubmit={this.chooseOldDoc} buttonName="选择老医生"></Button>
-								<Button class="choose-new-doc" clickSubmit={this.chooseNewDoc} buttonName="选择新医生"></Button>
+						this.state.surveyType == 'NEW' ?(
+							<div>
+								<NewDoctorSurvey newDoctorSurveyChange={this.handleInputChange}></NewDoctorSurvey>
+								<Button class="finish-survey" clickSubmit={this.finish} buttonName="完成问卷"></Button>
+							</div>
+						):(
+							<div>
+								<OldDoctorSurvey oldDoctorSurveyChange={this.handleInputChange}></OldDoctorSurvey>
+								<Button class="finish-survey" clickSubmit={this.finish} buttonName="完成问卷"></Button>
 							</div>
 						)
+					) : (
+						<div className="choose-type">
+							<Button class="choose-old-doc" clickSubmit={this.chooseOldDoc} buttonName="选择老医生"></Button>
+							<Button class="choose-new-doc" clickSubmit={this.chooseNewDoc} buttonName="选择新医生"></Button>
+						</div>
+					)
 				}
 			</div>
 		);
 	}
 }
 
-function SurveyContent(props) {
-	const surveyType = props.surveyType;
-	if (surveyType === 'NEW') {
-		return <NewDoctorSurvey></NewDoctorSurvey>;
-	}
-	else {
-		return <OldDoctorSurvey></OldDoctorSurvey>;
-	}
-}
 
 export default App;

@@ -4,8 +4,11 @@ import './tablequestion.css';
 class TableQuestion extends Component {
     constructor(props) {
         super(props);
+        this.handleInputChange = this.handleInputChange.bind(this);
     }
-
+    handleInputChange(event) {
+        this.props.newDoctorSurveyChange(event);
+    }
     render() {
         return (
             <div className="table-question">

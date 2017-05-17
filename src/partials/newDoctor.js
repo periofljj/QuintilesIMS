@@ -10,7 +10,11 @@ import Button from '../components/button/button';
 class NewDoctorSurvey extends Component {
     constructor(props) {
         super(props);
+        this.handleInputChange = this.handleInputChange.bind(this);
         // this.save = this.save.bind(this);
+    }
+    handleInputChange(event) {
+        this.props.newDoctorSurveyChange(event);
     }
 
     render() {
@@ -136,9 +140,7 @@ class NewDoctorSurvey extends Component {
                         <div className="reporter-line">M2. 完成6份病例的日期是 <input type="text" name="病例完成日期" onChange={this.handleInputChange}/> 年 <input type="text" name="病例完成日期" onChange={this.handleInputChange}/> 月 <input type="text" name="病例完成日期" onChange={this.handleInputChange}/> 日</div>
                     </div>
                 </div>
-                <SixQuestions></SixQuestions>
-                <Button class="finish-survey" saveSubmit={this.finish} buttonName="完成问卷"></Button>
-
+                <SixQuestions sixQuestionsChange={this.handleInputChange}></SixQuestions>
             </div>
         );
     }
