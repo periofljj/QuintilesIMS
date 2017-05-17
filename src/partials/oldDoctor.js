@@ -3,6 +3,7 @@ import DoctorInfo from '../components/doctorInfo/doctorInfo';
 import PageTitle from '../components/pageTitle/pageTitle';
 import SixQuestions from '../components/sixQuestions/sixQuestions';
 import TableQuestion from '../components/tablequestion/tablequestion';
+import Button from '../components/button/button';
 import './oldDoctor.css';
 
 
@@ -22,41 +23,41 @@ class OldDoctorSurvey extends Component {
                     <div className="reporter-content">
                          <div className="reporter-line">
                             <div className="reporter-line">
-                                <span>A1.医院名称</span> <input type="text" className="input-text"/>
+                                <span>A1.医院名称</span> <input type="text" className="input-text" name="医院名称"/>
                             </div>
                             <div className="reporter-line">
                                 <span>A2.医生姓名</span>
-                                <input type="text" className="input-text"/>
+                                <input type="text" className="input-text" name="医生姓名"/>
                                 <span className="input-text">A3.目前所在科室</span>
-                                <input type="text" className="input-text"/>
+                                <input type="text" className="input-text" name="科室"/>
                             </div>
                             <div className="reporter-line">
                                 <span>A4.您本季度是否出诊</span>
                                 <label>
                                     <span className="input-text">1.是 </span>
-                                    <input type="radio"/>
+                                    <input type="radio" name="本季度出诊" value="是"/>
                                 </label>
                                 <label>
                                     <span className="input-text">2.否 </span>
-                                    <input type="radio"/>
+                                    <input type="radio" name="本季度出诊" value="否"/>
                                 </label>
                                 <label>
                                     <span className="input-text">3.从来不出诊 </span>
-                                    <input type="radio"/>
+                                    <input type="radio" name="本季度出诊" value="从来不出诊"/>
                                 </label>
                             </div>
                             <div className="reporter-line">
                                 <div>A5.如果您出门诊:</div>
                                 <div>
                                     <ul>
-                                        <li><span>A5.1每周出 </span><input type="text"/> <span>个半天</span></li>
-                                        <li><span>A5.2每个半天看多少位 </span><input type="text"/> <span>恶性肿瘤病人</span></li>
+                                        <li><span>A5.1每周出 </span><input type="text" name="出门诊频率"/> <span>个半天</span></li>
+                                        <li><span>A5.2每个半天看多少位 </span><input type="text" name="诊断恶性肿瘤病人(人/半天)"/> <span>恶性肿瘤病人</span></li>
                                     </ul>  
                                 </div>
                             </div>
                             <div className="reporter-line">
                                 <span>A8.完成６份病例的日期是</span>
-                                <input type="text"/> 年 <input type="text"/> 月 <input type="text"/> 日
+                                <input type="text"/> 年 <input type="text" name="病例完成日期"/> 月 <input type="text"/> 日
                             </div>
                             <TableQuestion></TableQuestion>
                             <div className="reporter-line">
@@ -150,6 +151,7 @@ class OldDoctorSurvey extends Component {
                     </div>
                 </div>
                 <SixQuestions></SixQuestions>
+                <Button>完成问卷</Button>
             </div>
         );
     }

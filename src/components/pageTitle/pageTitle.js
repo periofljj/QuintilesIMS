@@ -12,10 +12,10 @@ class PageTitle extends Component {
             <div className="page-title">
                 <img className="logo" src={logo} alt="logo"/>
                 <span className="key">医院编号</span>
-                <input className="value" type="text"/>
+                <input className="value" type="text" name="hospital-no"/>
 
                 <span className="key">医生编号</span>
-                <input className="value" type="text"/>
+                <input className="value" type="text" name="doctor-no"/>
             </div>
         );
     }

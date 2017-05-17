@@ -7,6 +7,8 @@ import OldDoctorSurvey from './partials/oldDoctor';
 class App extends Component {
 	constructor(props) {
 		super(props);
+		this.handleInputChange = this.handleInputChange.bind(this);
+        this.finish = this.finish.bind(this);
 		this.chooseOldDoc = this.chooseOldDoc.bind(this);
 		this.chooseNewDoc = this.chooseNewDoc.bind(this);
 		this.state = {
@@ -26,7 +28,50 @@ class App extends Component {
 		// 	isChooseType:
 		// // });
 	}
+	handleInputChange(event) {
+        const target = event.target;
+        const name = target.name;
+        var value;
+        if (target.type === 'radio' || target.type === 'text' || target.type === 'number') {
+            value = target.value;
+        }
+        else if (target.type === 'checkbox') {
+            value = target.checked;
+        }
 
+        this.setState({
+            [name]: value
+        });
+        var states = this.state;
+        if (!states) {
+            states = {};
+        }
+        states[name] = value;
+        console.log("save");
+    }
+
+    finish() {
+        var array = [this.state];
+        var csv = Papa.unparse(array);
+        console.log("save", csv);
+        var localStorage = window.localStorage;
+        var exportFilename = "survey-result.csv";
+        var csvData = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
+        //IE11 & Edge
+        if (navigator.msSaveBlob) {
+            navigator.msSaveBlob(csvData, exportFilename);
+        } else {
+            //In FF link must be added to DOM to be clicked
+            var link = document.createElement('a');
+            link.href = window.URL.createObjectURL(csvData);
+            link.setAttribute('download', exportFilename);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        localStorage.removeItem("medical-survey");
+    }
 	chooseOldDoc() {
 		console.log("ssssss");
 		this.setState({
