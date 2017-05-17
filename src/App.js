@@ -3,6 +3,7 @@ import './App.css';
 import Button from './components/button/button';
 import NewDoctorSurvey from './partials/newDoctor';
 import OldDoctorSurvey from './partials/oldDoctor';
+import Papa from 'papaparse/papaparse';
 
 class App extends Component {
 	constructor(props) {
