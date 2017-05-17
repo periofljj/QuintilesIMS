@@ -20,8 +20,8 @@ class OldDoctorSurvey extends Component {
     render() {
         return (
             <div>
-                <PageTitle></PageTitle>
-                <DoctorInfo></DoctorInfo>
+                <PageTitle pageTitleChange={this.handleInputChange}></PageTitle>
+                <DoctorInfo doctorInfoChange={this.handleInputChange}></DoctorInfo>
                 <div className="reporter-info">
                     <div className="reporter-title">一、报告人基本信息</div>
                     <div className="reporter-content">

@@ -5,6 +5,10 @@ import logo from "../../../public/logo.png";
 class PageTitle extends Component {
     constructor(props) {
         super(props);
+        this.handleInputChange = this.handleInputChange.bind(this);
+    }
+    handleInputChange(event) {
+        this.props.pageTitleChange(event);
     }
 
     render() {
